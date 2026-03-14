@@ -4,4 +4,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../assets/images/pattern-bg-desktop.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Rubik", sans-serif;
 }/*# sourceMappingURL=main.css.map */

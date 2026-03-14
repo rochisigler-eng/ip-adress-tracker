@@ -2,12 +2,13 @@ import AddressInformation from "../../organisms/addressInformation/AddressInform
 import Map from "../../organisms/map/Map"
 import SearchBar from "../../organisms/searchBar/SearchBar"
 import { useState, useEffect } from 'react'
-
+import styles from './R01IpAddressTracker.module.scss'
 
 const R01IpAddressTracker = () => {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +30,6 @@ const R01IpAddressTracker = () => {
     fetchData()
   }, [])
 
-  console.log(data.ip)
   if (loading) {
     return <p>Loading...</p>
   }
@@ -37,12 +37,32 @@ const R01IpAddressTracker = () => {
     return <p>Error: {error}</p>
   }
 
-
+  let information = [
+    {
+      name: "ip address",
+      info: data?.ip
+    },
+    {
+      name: "location",
+      info: data?.location?.region
+    },
+    {
+      name: "timezone",
+      info: `UTC ${data?.location?.timezone}` 
+    },
+    {
+      name: "isp",
+      info: data?.isp
+    }
+  ]
+  if(!data) return null
 
   return (
-    <div>
+    <div className={styles.appContainer}>
       <SearchBar />
-      <AddressInformation />
+      {data && <AddressInformation
+      data = {information}
+      />}
       <Map />
     </div>
   )

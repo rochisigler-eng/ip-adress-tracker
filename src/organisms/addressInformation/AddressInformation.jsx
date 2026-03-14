@@ -1,7 +1,13 @@
+import Details from "../../molecules/details/Details"
+import styles from './AddressInformation.module.scss'
 
-const AddressInformation = () => {
+const AddressInformation = ({data}) => {
   return (
-    <div>AddressInformation</div>
+    <div className={styles.addressInformation}>
+      <Details
+      data= {data}
+      />
+    </div>
   )
 }
 

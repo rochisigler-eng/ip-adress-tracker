@@ -1,0 +1,8 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}/*# sourceMappingURL=R01IpAddressTracker.module.css.map */

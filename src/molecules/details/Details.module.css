@@ -1,1 +1,16 @@
-/*# sourceMappingURL=Details.module.css.map */
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  position: relative;
+  width: 25%;
+}
+.details .line {
+  color: #888;
+  transform: rotate(90deg);
+  position: absolute;
+  right: -25%;
+  top: 50%;
+  width: 50%;
+}/*# sourceMappingURL=Details.module.css.map */
