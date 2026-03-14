@@ -5,9 +5,7 @@
   background-color: #fff;
   border-radius: 15px;
   padding: 1rem;
-  position: fixed;
-  right: 15%;
-  left: 15%;
-  top: 25%;
   z-index: 10;
+  position: fixed;
+  top: 15rem;
 }/*# sourceMappingURL=AddressInformation.module.css.map */

@@ -1,1 +1,12 @@
-/*# sourceMappingURL=Button.module.css.map */
+.searchButton {
+  background-color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+.searchButton .arrowSearchIcon {
+  z-index: 10;
+}/*# sourceMappingURL=Button.module.css.map */

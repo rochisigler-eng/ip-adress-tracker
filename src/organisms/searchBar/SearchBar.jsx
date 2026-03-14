@@ -1,8 +1,24 @@
+import Input from "../../atoms/input/Input"
+import Button from "../../atoms/button/Button"
+import styles from "./SearchBar.module.scss"
+import { useState } from 'react'
 
+const SearchBar = ({setIp}) => {
+  const [value, setValue] = useState("")
 
-const SearchBar = () => {
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    setIp(value)
+  }
+
   return (
-    <div>SearchBar</div>
+    <form className={styles.searchBar} onSubmit={()=>handleSubmit(e)}>
+      <Input
+      setValue = {setValue}
+      value = {value}
+      />
+      <Button />
+    </form>
   )
 }
 

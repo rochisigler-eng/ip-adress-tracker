@@ -3,17 +3,18 @@ import Map from "../../organisms/map/Map"
 import SearchBar from "../../organisms/searchBar/SearchBar"
 import { useState, useEffect } from 'react'
 import styles from './R01IpAddressTracker.module.scss'
+import Title from "../../atoms/title/Title"
 
 const R01IpAddressTracker = () => {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
-  
+  const [ip, setIp] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://geo.ipify.org/api/v2/country?apiKey=at_ZCr63iuS0xJLtPlWX14PBRY5CVse1')
+        const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_ZCr63iuS0xJLtPlWX14PBRY5CVse1&ipAddress=${ip}`)
         if (!response.ok) {
           throw new Error(`HTTP error: Status ${response.status}`)
         }
@@ -59,7 +60,12 @@ const R01IpAddressTracker = () => {
 
   return (
     <div className={styles.appContainer}>
-      <SearchBar />
+      <Title 
+      text = "IP Address Tracker"
+      />
+      <SearchBar
+      setIp = {setIp}
+      />
       {data && <AddressInformation
       data = {information}
       />}

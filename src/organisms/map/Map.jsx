@@ -7,7 +7,7 @@ const Map = () => {
     <MapContainer
       center={[-34.6037, -58.3816]}
       zoom={13}
-      style={{ height: "50vh", width: "100%", position: "absolute", bottom: 0 }}
+      style={{ height: "65vh", width: "100%", position: "absolute", bottom: 0, zIndex: "0" }}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
