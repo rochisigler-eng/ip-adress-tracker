@@ -8,4 +8,11 @@
   z-index: 10;
   position: fixed;
   top: 15rem;
+}
+@media (max-width: 866px) {
+  .addressInformation {
+    flex-direction: column;
+    top: 8.5rem;
+    width: 80%;
+  }
 }/*# sourceMappingURL=AddressInformation.module.css.map */

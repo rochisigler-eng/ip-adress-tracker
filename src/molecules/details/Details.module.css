@@ -13,4 +13,14 @@
   right: -25%;
   top: 50%;
   width: 50%;
+}
+@media (max-width: 866px) {
+  .details {
+    padding: 0.5rem;
+    width: 100%;
+    align-items: center;
+  }
+  .details .line {
+    display: none;
+  }
 }/*# sourceMappingURL=Details.module.css.map */

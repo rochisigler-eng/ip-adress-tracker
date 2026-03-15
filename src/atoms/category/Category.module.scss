@@ -4,4 +4,8 @@
     text-transform: uppercase;
     font-weight: bold;
     padding: 0 0 1rem 0;
+
+    @media (max-width: 866px) {
+        padding: 0 0 .5rem 0;
+    }
 }
